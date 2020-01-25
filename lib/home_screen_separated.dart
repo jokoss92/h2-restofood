@@ -61,10 +61,10 @@ class _ListFoodState extends State<ListFood> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ListView.builder(
-        // separatorBuilder: (BuildContext context, index) => Divider(
-        //   color: Colors.blue,
-        // ),
+      child: ListView.separated(
+        separatorBuilder: (BuildContext context, index) => Divider(
+          color: Colors.blue,
+        ),
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         itemCount: foods.length,
